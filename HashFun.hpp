@@ -1,5 +1,7 @@
 #pragma once
 
+// Default hash function, if no custom provided
+
 template <typename K, size_t tabSize>
 struct HashFun {
     unsigned long operator()(const K& key) const {

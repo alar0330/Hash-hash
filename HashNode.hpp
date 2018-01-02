@@ -1,5 +1,7 @@
 #pragma once
 
+// Classic singly linked list with storage for key and value
+
 template<typename K, typename V>
 class HashNode {
    

@@ -2,6 +2,9 @@
 #include "HashNode.hpp"
 #include "HashFun.hpp"
 
+// Simple hash table implementation
+// Best to provide a custom hash function
+
 template < typename K, typename V,
            size_t tabSize, typename F = HashFun<K, tabSize> >
 class HashTable {
@@ -22,7 +25,7 @@ public:
             while (entry != nullptr) {
                 HashNode<K, V>* prev = entry;
                 entry = entry->getNext();
-                delete prev; // remove nodes
+                delete prev; // remove all nodes
             }
 
             _table[i] = nullptr; // remove bucket root
