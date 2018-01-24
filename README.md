@@ -11,7 +11,7 @@ Documented with Doxygen to get going with it.
 make test
 ```
 
-## Create HTML % Latex documentation
+## Create HTML & Latex documentation
 ```
 make doc
 ```
