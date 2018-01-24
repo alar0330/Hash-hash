@@ -3,7 +3,7 @@
 #include "HashFun.hpp"
 
 // Simple hash table implementation
-// Best to provide a custom hash function
+// For better performance, always provide the case-specific hash function
 
 template < typename K, typename V,
            size_t tabSize, typename F = HashFun<K, tabSize> >
