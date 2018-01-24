@@ -1,18 +1,27 @@
 /**
- *
+ *  @file    HashFun.hpp
  *  @author  Alexander Arzhanov
  *  @version 29/12/17
  *
- *  @brief   Default hash function
- *  <!      ´´´´´´´´´´´´´´´´´´´´´´   >
- *
- *  Implementation of the default hash function.
- *  Will be used if no custom hash function is provided.
- *
+ ***********
+ *  @brief    Contains template with default hash functor.
+ ***********
 **/
 
 #pragma once
 
+/**
+ ***********
+ *  @brief    Default hash functor.
+ ***********
+ *
+ *  Implementation of the default hash functor.
+ *  Will be used if no custom hash functor is provided.
+ *
+ *  @tparam K Type of the Key.
+ *  @tparam tabSize Size of the HashTable to be used with.
+ *
+**/
 template <typename K, size_t tabSize>
 struct HashFun {
     unsigned long operator()(const K& key) const {

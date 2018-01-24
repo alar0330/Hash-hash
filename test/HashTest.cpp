@@ -1,10 +1,11 @@
 /**
- *
+ *  @file    HashTest.cpp
  *  @author  Alexander Arzhanov
  *  @version 29/12/17
  *
+ ********************************
  *  @brief   A lazy unit test
- *  <!      ´´´´´´´´´´´´´´´´´   >
+ ********************************
  *
  *  Automated unit testing with 4 test cases.
  *
@@ -18,6 +19,11 @@
 
 using namespace std;
 
+/**
+ ***********
+ *  @brief    Custom Hashing Functor for the Test Suite.
+ ***********
+**/
 struct MyHashFun {
     unsigned long operator()(const int& k) const {
         return k % 10;
