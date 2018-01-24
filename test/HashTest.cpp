@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <assert.h>
-#include "HashTable.hpp"
+#include "../inc/HashTable.hpp"
 
 using namespace std;
 
