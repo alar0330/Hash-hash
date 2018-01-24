@@ -3,6 +3,8 @@
 bin/
 out/
 test/
+latex/
+html/
 *.backup
 *.exe
 *.bin

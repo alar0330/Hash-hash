@@ -1,9 +1,20 @@
+/**
+ *
+ *  @author  Alexander Arzhanov
+ *  @version 29/12/17
+ *
+ *  @brief   Hash table implementation
+ *  <!      ´´´´´´´´´´´´´´´´´´´´´´´´´´   >
+ *
+ *  Simple hash table implementation.
+ *  For better performance, always provide the case-specific hash function.
+ *
+**/
+
+
 #include <cstddef>
 #include "HashNode.hpp"
 #include "HashFun.hpp"
-
-// Simple hash table implementation
-// For better performance, always provide the case-specific hash function
 
 template < typename K, typename V,
            size_t tabSize, typename F = HashFun<K, tabSize> >

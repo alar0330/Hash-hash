@@ -1,3 +1,16 @@
+/**
+ *
+ *  @author  Alexander Arzhanov
+ *  @version 29/12/17
+ *
+ *  @brief   A lazy unit test
+ *  <!      ´´´´´´´´´´´´´´´´´   >
+ *
+ *  Automated unit testing with 4 test cases.
+ *
+**/
+
+
 #include <iostream>
 #include <string>
 #include <assert.h>
@@ -13,26 +26,30 @@ struct MyHashFun {
 
 int main() {
     
+    unsigned t = 1;
+    const char OK[] = ": OK\n";
+    const char FAILED[] = ": FAILED\n";
+    
     HashTable<int, string, 10, MyHashFun> hmap;
     hmap.put(1, "1");
     hmap.put(2, "2");
     hmap.put(3, "3");
     
-    cout << "Test started." << endl;
+    cout << "Test suite started." << endl;
 
     auto value = hmap.get(2, "NF");
-    assert(value == "2");
+    cout << "Test #" << t++ << (value == "2" ? OK : FAILED);
 
     value = hmap.get(3, "NF");
-    assert(value == "3");
+    cout << "Test #" << t++ << (value == "3" ? OK : FAILED);
     
     value = hmap.get(4, "NF");
-    assert(value == "NF");
+    cout << "Test #" << t++ << (value == "NF" ? OK : FAILED);
 
     hmap.remove(3);
     value = hmap.get(3, "NF");
-    assert(value == "NF");
+    cout << "Test #" << t++ << (value == "NF" ? OK : FAILED);
     
-    cout << "Test finished." << endl;
+    cout << "Test suite finished." << endl;
     
 }

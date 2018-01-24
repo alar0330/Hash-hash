@@ -1,6 +1,16 @@
-#pragma once
+/**
+ *
+ *  @author  Alexander Arzhanov
+ *  @version 29/12/17
+ *
+ *  @brief   Singly linked list
+ *  <!      ´´´´´´´´´´´´´´´´´´´   >
+ *
+ *  Classic singly linked list with storage for key and value.
+ *
+**/
 
-// Classic singly linked list with storage for key and value
+#pragma once
 
 template<typename K, typename V>
 class HashNode {
