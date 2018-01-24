@@ -1,5 +1,18 @@
 # Hash-hash
 
-Simple hash table template-only C++ implementation.
+## C++ Hash Table template-based implementation
 
+Mini-project with a simple template-only Hash Table implementation as a C++ execise.
+A quick framework-free unit testing is included.
+Documented with Doxygen to get going with it.
+
+## Compile & Test
+```
+make test
+```
+
+## Create HTML % Latex documentation
+```
+make doc
+```
 
