@@ -8,6 +8,7 @@ C++ = g++
 WFLAGS = -Wall -pedantic
 OPTFLAGS =
 BIN = HashTest.exe
+DOX = doxyfile
 
 # Profiling setting
 PROFLAGS =
@@ -19,7 +20,7 @@ out = out
 test = test
 
 # Phonies
-.PHONY = unit test clean
+.PHONY = doc unit test clean
 
 	
 # Compilation: Test
@@ -31,7 +32,11 @@ unit: $(out)/HashTest.o
    
 $(out)/HashTest.o: $(test)/HashTest.cpp $(wildcard $(inc)/*.hpp)
 	$(C++) $(WFLAGS) -o $@ -c $<
-
+	
+	
+# Doxygen
+doc:
+	doxygen $(DOX)
 	
 # Clean up
 clean:
